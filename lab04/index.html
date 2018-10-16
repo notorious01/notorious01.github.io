@@ -1,7 +1,7 @@
 <html>
 <body>
 
-<canvas id='lab4' height='1200' width='1400' style='border-width: 3px' />
+<canvas id='lab04' height='1200' width='1400' style='border-width: 3px' />
 <script>
 var buffer =[];
 var img = new Image();
@@ -10,7 +10,7 @@ img.onload = function() {
   draw(this);
 };
 function draw(img) {
-    var canvas = document.getElementById('lab4');
+    var canvas = document.getElementById('lab04');
     var ctx = canvas.getContext('2d');
     ctx.drawImage(img, 0, 0);
     var imageData, ImageRectData, imageSobelData;
