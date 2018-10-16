@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
   <title>Anime JS</title>
-  <style>
-    #block {
+</head>
+<body>
+  #block {
   width: 50px;
   height: 50px;
   background-color: #8f93e6;
@@ -32,14 +33,29 @@
   background-color: #c9c9c9;
   border-color: #b9b9b9;
 }
-  </style>
-</head>
-<body>
-
   <div id="block"></div>
   <button class="btn">Анимировать</button>
+  var blockMove = anime ({
+  targets: '#block',
+  translateX: -100,
+  translateY: 300,
+  autoplay: false,
+  backgroundColor: '#dd9357',
+  borderRadius: '50%',
+  easing: 'linear',
+  duration: 2000,
+  direction: 'alternate',
+  scale: {
+    value: 2,
+    duration: 1600,
+    delay: 800,
+    easing: 'easeInOutQuart'
+  },
+  rotate: '1turn'
+});
 
-  <script src="js/anime.min.js"></script>
+document.querySelector ('.btn').onclick = blockMove.restart;
+<script src="js/anime.min.js"></script>
   <script src="js/animate.js"></script>
 </body>
 </html>
